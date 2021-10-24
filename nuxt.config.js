@@ -6,8 +6,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - igoswap',
-    title: 'igoswap',
+    titleTemplate: '%s - nuxt-moralis',
+    title: 'Nuxtjs-Moralis Template',
     htmlAttrs: {
       lang: 'en'
     },
