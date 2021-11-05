@@ -40,21 +40,21 @@
 export default {
   data(){
     return {
-      blockaddress:''
+      useraddress:''
     }
   },
   methods:{
-    login(){
-      this.$moralis.Web3.authenticate().then(res => {
+    async login(){
+      await Moralis.Web3.authenticate().then(res => {
         console.log(res);
+        // get user wallet address
+        this.useraddress = res['attributes']['ethAddress']
         }).catch(err => {
           console.log(err);
 
         });
 
-      // this.$moralis.Web3.authenticate().then(function (user) {
-      //   console.log(user.get('ethAddress'))
-      //   })
+
     },
 
   }
